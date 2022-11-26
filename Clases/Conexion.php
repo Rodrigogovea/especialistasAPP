@@ -1,14 +1,20 @@
-<?php 	
-	
-	class Conexion {
-		public function Conectar() {
-			$Servidor="localhost";
-			$Usuario="root";
-			$Contrasena="root";
-			$BaseDatos="appChat2";
-			$conexion=new mysqli($Servidor,$Usuario,$Contrasena,$BaseDatos);
-			echo ":D";
-		}
-	}
+<?php
+class Conexion {
+	function Conectar() : mysqli{
+	$Server="localhost";
+	$BaseDatos="appChat2";
+	$User="root";
+	$Password="root";
+	$db = new mysqli($Server, $User,$Password,$BaseDatos);
 
- ?>
+	//echo "ok";
+
+	if(!$db)
+    {
+        echo "Error no se puede conectar";
+        exit;
+    } 
+    return $db;
+	}
+}
+?>

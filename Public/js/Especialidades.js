@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('#cargaTablaEspecialidades').load('../../Vistas/Especialidades/TablasEspecialidades.php');
+    $('#cargaTablaEspecialidades').load('/Vistas/Especialidades/TablasEspecialidades.php');
 
     $('#btnGuardarEspecialidad').click(function(){
       agregarEspecialidad();
